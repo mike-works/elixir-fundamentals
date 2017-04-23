@@ -9,7 +9,7 @@ defmodule ListUtilsTest do
   end
   
   test "Reduce to count items" do
-    assert 3 === ListUtils.reduce([1, 2, 3], fn item, acc ->
+    assert 3 === ListUtils.reduce([1, 2, 3], fn _item, acc ->
       acc + 1
     end, 0)
   end
