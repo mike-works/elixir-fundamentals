@@ -1,4 +1,4 @@
-defmodule ElixirFundamentals do
+defmodule ElixirFundamentals.Formatter do
   @moduledoc """
   Documentation for ElixirFundamentals.
   """
