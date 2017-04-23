@@ -3,11 +3,6 @@ formatter = fn(symbol) ->
   # TODO
 end
 
-dollar = formatter.("$")
-dollar.(121) # "$ 121"
-
-
-
 ##### TESTS #####
 test = fn to_run, expected, description ->
   require Logger
