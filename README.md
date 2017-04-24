@@ -305,3 +305,17 @@ defmodule MobileApp do
   end
 end
 ```
+
+## Recursion for Lists
+In Elixir, it is highly recommended to use recursion in place of iteration for lists. This can be achieved with the ```|``` divider.
+
+Example:
+```
+defmodule ListProcessor do
+  def sum([]), do: 0
+  def sum([head | tail]), do: head + sum(tail)
+end
+
+ListProcessor.([1,2,3,4,5])   # sum([1 | [2,3,4,5]]) 
+```
+
