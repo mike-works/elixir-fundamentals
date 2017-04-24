@@ -124,3 +124,45 @@ end
 bar()   # "Elixir is\n1. Functional\n2. Fun to write!"
 ```
 
+## Functions and Modules
+
+### Anonymous Functions
+
+An anonymous function begins with ```fn``` and end with ```end```. Invoke function using ```.()``` passing arguments
+
+Example:
+```
+square = fn x -> x * x end
+
+square.(12)   #144
+```
+
+Functions can have multiple clauses, each designed to handle a scenario. This is a similar concept to Javascript Case Switch control flow.
+
+When compiled, the BEAM virtual machine will check through each clause from top to bottom, and execute the first clause which matches pattern passed in.
+
+Example:
+```
+calculate = fn
+  {:add, a, b} -> a * b
+  {:multiply, a, b} -> a * b
+  _                 -> "No calculation!"
+end
+
+calculate.({:add, 3, 7})   #10
+```
+
+### Guards
+In functions, we can define conditions to check as clauses are evaluated. Guards can be used to control flow of clauses.
+
+[Elixir Reference Link](http://elixir-lang.org/getting-started/case-cond-and-if.html#expressions-in-guard-clauses)
+
+Example:
+```
+enter_bar = fn
+  age when age <21 -> "Sorry, no entry."
+  _                 -> "Come on in!"
+end
+
+ender_bar.(40)    # "Come on in!"
+```
