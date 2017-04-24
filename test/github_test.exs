@@ -2,7 +2,6 @@ defmodule GithubTest do
   use ExUnit.Case
   @moduletag :exercise3
 
-  @api_key  Application.get_env(:elixir_fundamentals, :github_token)
   @api_base Application.get_env(:elixir_fundamentals, :github_api) || "https://api.github.com"
 
   test "org URL building is done properly for string org names" do
