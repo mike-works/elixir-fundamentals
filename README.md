@@ -200,3 +200,35 @@ time_format = &("#{&1}:#{&2}")
 
 time_format.(9, 45)   # "9:45"
 ```
+
+## Modules
+Modules are named functions, in which you can define multiple functions. Within the scope of each module, you can define Private Functions that are only accessible within the parent module.
+
+Best practice is to define more specific function clauses first when the clauses have the same name.
+
+Example:
+```
+defmodule Formatter do
+  def money(%{amount: amt}) do
+     money(amt)
+  end
+  def money(x), do : "$#{x}"
+
+  defp log(x), do: &IO.puts(&1)
+end
+
+Formatter.money(100)  #  $100
+```
+
+## Default Values in Functions
+Function arguments can specify default values with ```\\``` symbol.  In Elixir, not all arguments have to have default values!
+
+Example:
+```
+defmodule Formatter do
+  def money(x, symbol \\ "$"), do: "#{symbol}#{x}"
+end
+
+Formatter.money(100)    #  $100
+Formatter.money(100, "€")    # "€100"
+```
