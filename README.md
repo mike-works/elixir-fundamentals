@@ -232,3 +232,68 @@ end
 Formatter.money(100)    #  $100
 Formatter.money(100, "€")    # "€100"
 ```
+
+## Pipe-forward operator |>
+In Elixir, you can use the pipe-forward operator ```\>``` to sequentially operate on a value passed into a function as an argument.  This is a powerful concept, reducing repeition and writing D.R.Y code.
+
+Example
+```
+star_wars = MapSet.new
+star_wars = MapSet.put(star_wars, "A New Hope")
+star_wars = MapSet.put(star_wars, "The Empire Strikes Back")
+star_wars = MapSet.put(star_wars, "Return of the Jedi")
+
+star_wars   # ["A New Hope", "The Empire Strikes Back", "Return of the Jedi"]
+```
+
+Let's use the pipe-forward symbole ```\>``` :
+```
+star_wars = MapSet.new
+|> MapSet.put(star_wars, "A New Hope")
+|> MapSet.put(star_wars, "The Empire Strikes Back")
+|> MapSet.put(star_wars, "Return of the Jedi")
+
+star_wars   # ["A New Hope", "The Empire Strikes Back", "Return of the Jedi"]
+```
+
+## Module Directives: import
+Using the ```import``` directive, you can include another module's (named function) public functions/macros into the scope of any module. You can also use it to cut down on fully-namespaces calls.
+
+Example:
+```
+defmodule Calculator do
+  def add(items) do
+    import IO, only: [puts: 1]
+    puts "Adding !#Enum.count(items)} things"
+    Enum.sum(items)
+  end
+end
+```
+
+## Module Directives: alias
+Alias is handy as shorthand references for complex, deeply nested modules. You should define alias in the top of the body of your module, and by default "aliased" name is the last part of the module name. Alternatively, you can map to a new name with ```as: ```
+
+Example:
+```
+defmodule Calculator do
+  alias MyApp.Models.User, as: U;
+  def register(data) do
+    data
+    |> U.process_registration
+  end
+end
+```
+
+## Module Directives: attributes @
+Attributes is defined with the ```@``` symbol. They are often used to keep track of environment variables, such as ```Application.get_env(:my_app, :github_key)``` . This concept is similar to Ruby's ```constants``` , where it is immutable and cannot be set from within module functions.
+
+Example:
+```
+defmodule GithubApi do
+  @api_key Application.get_env(:my_app, :github_key)
+  defp key do
+    @api_key
+  end
+end
+```
+
