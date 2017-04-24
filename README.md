@@ -25,3 +25,11 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can be found at [https://hexdocs.pm/elixir_fundamentals](https://hexdocs.pm/elixir_fundamentals).
 
+## Erlang ecosystem
+
+Erlang is a tried and tested language for over 30 years! Therefore, Elixir benefits from Erlang's rich ecosystem with a wealth of libraries, all with modern language features.  Elixir has taken a lot of Ruby's strength and improved on the weakness, making it fun to write with minimal syntax. It is a functional language, centered on building scalable products over academic curiosity.
+
+Learn more her: https://www.erlang.org/
+
+
+
