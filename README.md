@@ -169,3 +169,34 @@ end
 
 ender_bar.(40)    # "Come on in!"
 ```
+
+## Higher order functions
+HO functions take a function as an argument and returns a function. The scope defined is similar to Javascript's Closure concept.
+
+Example:
+```
+add = fn x ->
+  fn y -> x + y end
+end
+
+add.(3)(5)   # 8
+```
+
+## Functions Shorthand Notation
+We can define short helper functions inline with ```&()``` , these are handy if you are creating simple, single-purpose functions.
+
+Example:
+```
+currency_maker = &("$#{&1}")
+
+currency_maker.(150)   #  $150
+```
+
+In shorthand notations, we can further select ordered arguments using ```&1, &2``` etc. 
+
+Example:
+```
+time_format = &("#{&1}:#{&2}")
+
+time_format.(9, 45)   # "9:45"
+```
