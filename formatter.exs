@@ -1,6 +1,8 @@
 
 formatter = fn
-  _ -> "placeholder"
+  x when abs(x) >= 1_000_000 -> "#{x/1_000_000}M"
+  x when abs(x) >= 1_000 and abs(x) < 1_000_000 -> "#{x/1000}K"
+  x when abs(x) < 1000 -> "#{x}" 
 end
 
 
