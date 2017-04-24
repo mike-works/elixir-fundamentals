@@ -1,6 +1,10 @@
 
-formatter = fn(symbol) ->
-  # TODO
+formatter = fn (symbol) -> # $
+  fn
+    0 -> "0"
+    x when x > 0 -> "#{symbol} #{x}"
+    x when x < 0 -> "(#{symbol} #{abs(x)})"
+  end
 end
 
 ##### TESTS #####
