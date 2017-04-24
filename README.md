@@ -5,12 +5,10 @@ Attending Rails to Elixir & Phoenix workshop with Michael North @mike-north in B
 Workshop details: https://elixir-phoenix-workshop.simplabs.com/
 
 ## Phoenix and Elixir
-
 The Phoenix Framework allows developers to build robust, performant and scalable web applications faster than ever. By combining Elixir's modern language syntax and tried-and tested foundation, with many of the productivity benefits that made Ruby on Rails astonishingly popular, this new web framework promises to be great (dare I say, ideal?) option for a variety of projects.
 
 
 ## Installation
-
 Github repo: https://github.com/mike-north/elixir-fundamentals-workshop
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
@@ -26,7 +24,6 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can be found at [https://hexdocs.pm/elixir_fundamentals](https://hexdocs.pm/elixir_fundamentals).
 
 ## Erlang ecosystem
-
 Erlang is a tried and tested language for over 30 years! Therefore, Elixir benefits from Erlang's rich ecosystem with a wealth of libraries, all with modern language features.  Elixir has taken a lot of Ruby's strength and improved on the weakness, making it fun to write with minimal syntax. 
 
 Learn more here: https://www.erlang.org/
@@ -130,7 +127,6 @@ bar()   # "Elixir is\n1. Functional\n2. Fun to write!"
 ## Functions and Modules
 
 ### Anonymous Functions
-
 An anonymous function begins with ```fn``` and end with ```end```. Invoke function using ```.()``` passing arguments
 
 Example:
@@ -170,7 +166,7 @@ end
 ender_bar.(40)    # "Come on in!"
 ```
 
-## Higher order functions
+### Higher order functions
 HO functions take a function as an argument and returns a function. The scope defined is similar to Javascript's Closure concept.
 
 Example:
@@ -182,7 +178,7 @@ end
 add.(3)(5)   # 8
 ```
 
-## Functions Shorthand Notation
+### Functions Shorthand Notation
 We can define short helper functions inline with ```&()``` , these are handy if you are creating simple, single-purpose functions.
 
 Example:
@@ -201,7 +197,7 @@ time_format = &("#{&1}:#{&2}")
 time_format.(9, 45)   # "9:45"
 ```
 
-## Modules
+### Modules
 Modules are named functions, in which you can define multiple functions. Within the scope of each module, you can define Private Functions that are only accessible within the parent module.
 
 Best practice is to define more specific function clauses first when the clauses have the same name.
@@ -220,7 +216,7 @@ end
 Formatter.money(100)  #  $100
 ```
 
-## Default Values in Functions
+### Default Values in Functions
 Function arguments can specify default values with ```\\``` symbol.  In Elixir, not all arguments have to have default values!
 
 Example:
@@ -297,3 +293,15 @@ defmodule GithubApi do
 end
 ```
 
+## Data structure: Struct
+Structs are special flavors of Map, where you can define properties and enable pattern matching by type.
+
+Example:
+```
+defmodule MobileApp do
+  defstruct name: "", platforms: ["ios"]
+  def download_url(%MobileApp{name: app_name, platforms: ["ios"]}) do
+    "https:!/dl.apple.com?name=!#app_name}"
+  end
+end
+```
