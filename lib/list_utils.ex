@@ -1,11 +1,13 @@
 defmodule ListUtils do
   # Exercise 7
-  def reduce(list, reducer, accumulator) do
-    
+  def reduce([], _reducer, accumulator), do: accumulator
+  def reduce([head|tail], reducer, accumulator) do
+    reduce(tail, reducer, reducer.(head, accumulator))
   end
 
-  def map(original, transform_fn, transformed \\ []) do
-  
+  def map([], transform_fn, transformed), do: transformed
+  def map([head|tail], transform_fn, transformed \\ []) do
+    map(tail, transform_fn, transformed ++ [transform_fn.(head)])
   end
 
   # Exercise 8
