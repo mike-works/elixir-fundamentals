@@ -27,9 +27,100 @@ and published on [HexDocs](https://hexdocs.pm). Once published, the docs can be 
 
 ## Erlang ecosystem
 
-Erlang is a tried and tested language for over 30 years! Therefore, Elixir benefits from Erlang's rich ecosystem with a wealth of libraries, all with modern language features.  Elixir has taken a lot of Ruby's strength and improved on the weakness, making it fun to write with minimal syntax. It is a functional language, centered on building scalable products over academic curiosity.
+Erlang is a tried and tested language for over 30 years! Therefore, Elixir benefits from Erlang's rich ecosystem with a wealth of libraries, all with modern language features.  Elixir has taken a lot of Ruby's strength and improved on the weakness, making it fun to write with minimal syntax. 
 
-Learn more her: https://www.erlang.org/
+Learn more here: https://www.erlang.org/
 
+Elixir is a functional language, centered on building scalable products over academic curiosity.
 
+## Data Structures
+In Elixir, data structures are grouped into two categories:
+
+** Types of Values **
+* Integers
+* Floats
+* Atoms
+Similar to ```symbols``` in Ruby, Atoms are constants and globally stored. Often used in key:value pairs as the key. Atoms do take up memory and held on to for the entire lifecycle of your app, so use them with caution.
+
+Example: 
+``` :first_name ```
+
+* Ranges
+
+** Types of Collections **
+* Tuples
+Ordered sets of values and widely used in pattern matching, Tuples behaves similarly as Javscript objects or Ruby hashes. 
+Tuples are typically <= 5 elements in Elixir best practice.
+
+Example:
+``` 
+{:first_name, "Mike"}
+{:ok, status} = {:ok, "Success!"} 
+status  # "Success!"
+```
+
+* Lists
+Elixir lists are Linked Lists, which store ordered collection of values. Best practice prefer recursion over iteration of list elements (no For Loops!)
+
+Example:
+```
+[1,2,3] ++ [5,6]   #[1,2,3,5,6]
+```
+
+* Maps
+Maps are also key-value data structures, and are more performant than Lists. 
+Keys must be unique!
+
+Example:
+```
+person = %{
+  name: "Lisa",
+  skills: "coding"
+}
+```
+
+Maps can be nested too! As data structures are immutable, if you update or add new key:values into a map, you will create a new copy of the Map applied to.
+
+Example:
+```
+instructor = %{
+  name: "Mike North",
+  location: %{
+    country: "Germany",
+    city: "Berlin"
+  }
+}
+```
+
+* Binaries
+Ordered collection for raw binary data. F
+
+Example:
+```
+red_RGB = <<255, 0, 0>>
+```
+
+* Strings
+Elixir treats double-quote string ```"str"``` as a binary, versus single-quote ```'str'``` as a string.
+Elixir has a ```spaceship <>``` operation for concatenation.
+
+Example:
+```
+"Learning " <> "Elixir"
+```
+
+To create multi-line strings, use three double-quotes - this is known as ```Heredocs```.
+
+Example:
+```
+def bar() do
+  str = """
+  Elixir is
+  1. Functional
+  2. Fun to write!
+  """
+end
+
+bar()   # "Elixir is\n1. Functional\n2. Fun to write!"
+```
 
