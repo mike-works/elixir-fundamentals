@@ -36,7 +36,7 @@ Elixir is a functional language, centered on building scalable products over aca
 ## Data Structures
 In Elixir, data structures are grouped into two categories:
 
-** Types of Values **
+### Types of Values
 * Integers
 * Floats
 * Atoms
@@ -46,8 +46,11 @@ Example:
 ``` :first_name ```
 
 * Ranges
+Example: 
+``` [4..10]   #[4,5,6,7,8,9,10]
+```
 
-** Types of Collections **
+### Types of Collections
 * Tuples
 Ordered sets of values and widely used in pattern matching, Tuples behaves similarly as Javscript objects or Ruby hashes. 
 Tuples are typically <= 5 elements in Elixir best practice.
