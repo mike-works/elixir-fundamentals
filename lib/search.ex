@@ -1,7 +1,15 @@
 defmodule Search do
+  
   def start do
-    
+    receive do
+      {sender_pid, {:complete_me, term}} ->
+        results = Autocomplete.get_completions(term)
+        IO.puts "Received term: #{term}, found #{length(results)} completions"
+        send(sender_pid, {self(), {:completions, results}})        
+    end
+    start
   end
+  
   def run(term) do
     import Logger
     # Kick off process
@@ -21,6 +29,10 @@ defmodule Search do
         items
         |> Enum.join(", ")
         |> IO.puts
+      x ->
+        Logger.error "Uknown message"
+        IO.inspect x
+        :sad 
     end
   end
 end
