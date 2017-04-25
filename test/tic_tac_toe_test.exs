@@ -4,7 +4,7 @@ defmodule TicTacToeTest do
 
   test "Starting a game should return a PID" do
     game = TicTacToe.new
-    assert is_pid(game) === true
+    assert is_pid(game) === true    
   end
 
   test "Board is full of nils before game starts" do
