@@ -5,9 +5,17 @@ defmodule ListUtils do
     reduce(tail, reducer, reducer.(head, accumulator))
   end
 
-  def map([], transform_fn, transformed), do: transformed
+  # The silly version
+  # def map([], transform_fn, transformed), do: transformed
+  # def map([head|tail], transform_fn, transformed \\ []) do
+  #   map(tail, transform_fn, transformed ++ [transform_fn.(head)])
+  # end
+
+  # The smarter version
+  def map([], transform_fn, transformed), do: Enum.reverse(transformed)
   def map([head|tail], transform_fn, transformed \\ []) do
-    map(tail, transform_fn, transformed ++ [transform_fn.(head)])
+    updated_transformed_items = [transform_fn.(head) | transformed]
+    map(tail, transform_fn, updated_transformed_items)
   end
 
   # Exercise 8
