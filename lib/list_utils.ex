@@ -19,7 +19,20 @@ defmodule ListUtils do
   end
 
   # Exercise 8
-  def bounds(list), do: {nil, nil}
+  def bounds([]), do: {nil, nil}
+  # [8, .......]
+  def bounds([head|tail]), do: bounds(tail, {head, head})
+
+  ##### PRIVATE #####
+  # no more work to do
+  defp bounds([], bounds_tuple), do: bounds_tuple
+  
+  # head > max
+  defp bounds([head|tail], {min, max}) when head > max, do: bounds(tail, {min, head})
+  # head < min
+  defp bounds([head|tail], {min, max}) when head < min, do: bounds(tail, {head, max})
+  # neither
+  defp bounds([_|tail], {min, max}), do: bounds(tail, {min,max})
 
   # Exercise 13
   def pmap(list, func) do
