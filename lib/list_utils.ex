@@ -35,7 +35,26 @@ defmodule ListUtils do
   defp bounds([_|tail], {min, max}), do: bounds(tail, {min,max})
 
   # Exercise 13
-  def pmap(list, func) do
-    # Add your exercise 13 solution here
-  end
+  def pmap(list, func) do # [1, 2, 3, 4]
+    parent_pid = self()
+    # 1. map over the list, kick off a new process for each
+    #    ↪  [PID, PID, PID, PID]
+    list
+    |> Enum.map(fn item ->
+        spawn_link(fn ->
+          # 1a. transform list[i]
+          transformed_item = func.(item)
+          # 1b. send a message back to the parent process w/ the result
+          send(parent_pid, {self(), transformed_item})
+        end)
+    end)
+    # 2. wait for messages to come back, return the tranformed list[i] to form a new list
+    #    ↪  [transformed list[0], transformed list[1], ...]
+    |> Enum.map(fn child_pid ->
+      receive do
+        {^child_pid, transformed_item} -> transformed_item
+        x -> "WTF?#{inspect x}"
+      end
+    end)
+ end
 end

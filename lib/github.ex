@@ -19,11 +19,11 @@ defmodule Github do
   end
 
   defp json_data(url) do
-    import HTTPoison, only: [get!: 3]
+    import HTTPoison, only: [get!: 1]
     import Poison, only: [decode!: 1]
 
     %{body: body_string, status_code: status} = url
-    |> get!([], params: %{access_token: @api_key})
+    |> get!#([], params: %{access_token: @api_key})
 
     body_string
     |> decode!
