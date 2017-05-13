@@ -2,7 +2,9 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :elixir_fundamentals, github_api: "https://api.github.com"
+config :elixir_fundamentals,
+  github_api: "https://api.github.com",
+  github_token: "4223f2b92ca96cb0241f5befa9ed984dfda93235"
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
