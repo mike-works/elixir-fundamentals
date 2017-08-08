@@ -9,8 +9,23 @@
   </a>
 </p> 
 
-This is the example project used for the [Mike.Works](https://mike.works) [Elixir Fundamentals](https://mike.works/course/elixir-fundamentals-2b07030) course.
-
+<p align='center'>
+  <a href="https://travis-ci.org/mike-north/elixir-fundamentals-workshop" title="Build Status">
+    <img title="Build Status" src="https://travis-ci.org/mike-north/elixir-fundamentals-workshop.svg?branch=solution"/>
+  </a>
+  <a href="https://mike.works/course/elixir-fundamentals-2b07030" title="Elixir Fundamentals">
+    <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
+  </a>
+  <a href="https://docs.mike.works/elixir-fundamentals" title="Slides">
+    <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
+  </a>
+  <a title="Greenkeeper badge" href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/mike-north/elixir-fundamentals-workshop.svg"/>
+  </a>
+</p>
+<p align='center'>
+This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="Elixir Fundamentals" href="https://mike.works/course/elixir-fundamentals-2b07030">Elixir Fundamentals</a> course.
+</p>
 
 
 # Setting Up
