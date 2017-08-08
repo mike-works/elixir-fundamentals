@@ -11,7 +11,7 @@
 
 <p align='center'>
   <a href="https://travis-ci.org/mike-north/elixir-fundamentals" title="Build Status">
-    <img title="Build Status" src="https://travis-ci.org/mike-north/elixir-fundamentals.svg?branch=solution"/>
+    <img title="Build Status" src="https://travis-ci.org/mike-north/elixir-fundamentals.svg?branch=solutions"/>
   </a>
   <a href="https://mike.works/course/elixir-fundamentals-2b07030" title="Elixir Fundamentals">
     <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
@@ -24,6 +24,8 @@
 This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="Elixir Fundamentals" href="https://mike.works/course/elixir-fundamentals-2b07030">Elixir Fundamentals</a> course.
 </p>
 
+# Are there any documents that go along with this?
+Yes! **[Here are the slides](https://docs.mike.works/elixir-fundamentals)**, and **[here's a course outline](https://mike.works/course/elixir-fundamentals-2b07030)**.
 
 # Setting Up
 * First, you'll need to ensure you have [Elixir](http://elixir-lang.org/install.html) installed on your computer. This workshop requires that you have version `1.4` installed, which requires Erlang `v18`.
