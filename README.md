@@ -10,8 +10,8 @@
 </p> 
 
 <p align='center'>
-  <a href="https://travis-ci.org/mike-north/elixir-fundamentals-workshop" title="Build Status">
-    <img title="Build Status" src="https://travis-ci.org/mike-north/elixir-fundamentals-workshop.svg?branch=solution"/>
+  <a href="https://travis-ci.org/mike-north/elixir-fundamentals" title="Build Status">
+    <img title="Build Status" src="https://travis-ci.org/mike-north/elixir-fundamentals.svg?branch=solution"/>
   </a>
   <a href="https://mike.works/course/elixir-fundamentals-2b07030" title="Elixir Fundamentals">
     <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
@@ -30,7 +30,7 @@ This is the example project used for the <a title="Mike.Works" href="https://mik
 
 * Next, clone this project
 ```sh
-git clone https://github.com/mike-north/elixir-fundamentals-workshop.git myelixir
+git clone https://github.com/mike-north/elixir-fundamentals.git myelixir
 ```
 * Then, go into the project and install dependencies
 ```sh
