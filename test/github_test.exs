@@ -48,8 +48,8 @@ defmodule GithubTest do
   end
 
 
-  test "repo(\"mike-north\", \"elixir-fundamentals-workshop\") returns a tuple, with :ok as first item" do
-    repo_result = Github.repo("mike-north", "elixir-fundamentals-workshop")
+  test "repo(\"mike-north\", \"elixir-fundamentals\") returns a tuple, with :ok as first item" do
+    repo_result = Github.repo("mike-north", "elixir-fundamentals")
     assert is_tuple(repo_result)
     {workshop_status, _body} = repo_result
     assert workshop_status === :ok
