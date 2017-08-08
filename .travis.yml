@@ -4,3 +4,7 @@ elixir:
 otp_release:
   - 18.2
 sudo: false
+
+branches:
+  only:
+  - solutions
