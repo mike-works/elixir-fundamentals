@@ -19,9 +19,6 @@
   <a href="https://docs.mike.works/elixir-fundamentals" title="Slides">
     <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
   </a>
-  <a title="Greenkeeper badge" href="https://greenkeeper.io/">
-    <img src="https://badges.greenkeeper.io/mike-north/elixir-fundamentals-workshop.svg"/>
-  </a>
 </p>
 <p align='center'>
 This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="Elixir Fundamentals" href="https://mike.works/course/elixir-fundamentals-2b07030">Elixir Fundamentals</a> course.
