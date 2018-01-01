@@ -15,12 +15,12 @@ defmodule GithubTest do
   end
 
   test "repo URL building is done properly for string owner and repo names" do
-    assert Github.repo_url("mike-north", "elixir-fundamentals-workshop") === "#{@api_base}/repos/mike-north/elixir-fundamentals-workshop"
+    assert Github.repo_url("mike-works", "elixir-fundamentals-workshop") === "#{@api_base}/repos/mike-works/elixir-fundamentals-workshop"
   end
 
   test "repo URL building is guarded against for non-string org and repo names" do
     assert_raise(FunctionClauseError, fn ->
-      Github.repo_url("mike-north", 6)
+      Github.repo_url("mike-works", 6)
     end)
     assert_raise(FunctionClauseError, fn ->
       Github.repo_url(6, "elixir-fundamentals-workshop")
@@ -48,15 +48,15 @@ defmodule GithubTest do
   end
 
 
-  test "repo(\"mike-north\", \"elixir-fundamentals\") returns a tuple, with :ok as first item" do
-    repo_result = Github.repo("mike-north", "elixir-fundamentals")
+  test "repo(\"mike-works\", \"elixir-fundamentals\") returns a tuple, with :ok as first item" do
+    repo_result = Github.repo("mike-works", "elixir-fundamentals")
     assert is_tuple(repo_result)
     {workshop_status, _body} = repo_result
     assert workshop_status === :ok
   end
 
-  test "repo(\"mike-north\", \"elixxxxir-fundamentals-workshop\") returns a tuple, with :error as first item" do
-    repo_result = Github.repo("mike-north", "elixxxxir-fundamentals-workshop")
+  test "repo(\"mike-works\", \"elixxxxir-fundamentals-workshop\") returns a tuple, with :error as first item" do
+    repo_result = Github.repo("mike-works", "elixxxxir-fundamentals-workshop")
     assert is_tuple(repo_result)
     {bad_status, _body} = repo_result
     assert bad_status === :error
@@ -65,7 +65,7 @@ defmodule GithubTest do
   test "repo() guards against non-string org and repo names" do
 
     assert_raise(FunctionClauseError, fn ->
-      Github.repo("mike-north", 6)
+      Github.repo("mike-works", 6)
     end)
     assert_raise(FunctionClauseError, fn ->
       Github.repo(6, "elixir-fundamentals-workshop")
