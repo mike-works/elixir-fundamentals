@@ -10,8 +10,8 @@
 </p> 
 
 <p align='center'>
-  <a href="https://travis-ci.org/mike-north/elixir-fundamentals" title="Build Status">
-    <img title="Build Status" src="https://travis-ci.org/mike-north/elixir-fundamentals.svg?branch=solutions"/>
+  <a href="https://travis-ci.org/mike-works/elixir-fundamentals" title="Build Status">
+    <img title="Build Status" src="https://travis-ci.org/mike-works/elixir-fundamentals.svg?branch=solutions"/>
   </a>
   <a href="https://mike.works/course/elixir-fundamentals-2b07030" title="Elixir Fundamentals">
     <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
@@ -32,7 +32,7 @@ Yes! **[Here are the slides](https://docs.mike.works/elixir-fundamentals)**, and
 
 * Next, clone this project
 ```sh
-git clone https://github.com/mike-north/elixir-fundamentals.git myelixir
+git clone https://github.com/mike-works/elixir-fundamentals.git myelixir
 ```
 * Then, go into the project and install dependencies
 ```sh
@@ -66,6 +66,6 @@ exercises contained within this project to run your own workshops
 
 # Copyright
 
-&copy; 2017 [Mike.Works](https://mike.works), All Rights Reserved
+&copy; 2018 [Mike.Works](https://mike.works), All Rights Reserved
 
 ###### This material may not be used for workshops, training, or any other form of instructing or teaching developers, without express written consent
