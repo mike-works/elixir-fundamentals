@@ -40,6 +40,14 @@ cd myelixir
 mix deps.get
 ```
 
+## Development Environment
+
+Setup a development environment that includes Elixir syntax hilighting. I recommend [Visual Studio Code](https://code.visualstudio.com/) with the following plugins
+* [vscode-elixir](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) - for syntax hilighting and intellisense (autocomplete) of Elixir and Erlang core libraries.
+* [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - for quick execution of code snippets
+* [Dark+ Elixir (color theme)](https://marketplace.visualstudio.com/items?itemName=kkalita.dark-plus-elixir) - highlights some important parts of the language syntax more prominently than many default themes
+
+
 # License
 While the general license for this project is the BSD 3-clause, the exercises
 themselves are proprietary and are licensed on a per-individual basis, usually
