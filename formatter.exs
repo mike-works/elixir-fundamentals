@@ -1,9 +1,12 @@
+# require IEx
 
+#  args  guards  -> 
 formatter = fn
-  _ -> "placeholder"
+  x when (x < 1000) and (x > -1000) -> "#{x}"
+  x when abs(x) < 1_000_000 -> "#{x/1000}K"
+  x -> "#{x/1_000_000}M"
 end
-
-
+# IEx.pry
 
 ##### TESTS #####
 test = fn to_run, expected, description ->

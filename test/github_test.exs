@@ -5,7 +5,7 @@ defmodule GithubTest do
   @api_base Application.get_env(:elixir_fundamentals, :github_api) || "https://api.github.com"
 
   test "org URL building is done properly for string org names" do
-    assert Github.org_url("jquery") === "#{@api_base}/orgs/jquery"
+    assert Github.org_url("jquery") === "#{@api_base}/orgs/jquery?access_token=47bd85eb824ee7f99ee82a7dd46bac777abb230a"
   end
 
   test "org URL building is guarded against (is_bitstring) for non-string org names" do
@@ -15,7 +15,7 @@ defmodule GithubTest do
   end
 
   test "repo URL building is done properly for string owner and repo names" do
-    assert Github.repo_url("mike-works", "elixir-fundamentals-workshop") === "#{@api_base}/repos/mike-works/elixir-fundamentals-workshop"
+    assert Github.repo_url("mike-works", "elixir-fundamentals-workshop") === "#{@api_base}/repos/mike-works/elixir-fundamentals-workshop?access_token=47bd85eb824ee7f99ee82a7dd46bac777abb230a"
   end
 
   test "repo URL building is guarded against for non-string org and repo names" do
