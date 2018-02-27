@@ -6,7 +6,7 @@ defmodule DeckTest do
     assert length(Deck.get_cards(5)) === 5
   end
 
-  test "Deck.get_cards(3) should return five cards" do
+  test "Deck.get_cards(3) should return three cards" do
     assert length(Deck.get_cards(3)) === 3
   end
 

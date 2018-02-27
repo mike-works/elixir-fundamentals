@@ -3,7 +3,7 @@ defmodule Autocomplete do
 
   def get_completions(hint) do
     # Switch this to use get_completions_good
-    {time, result} = measure(fn -> get_completions_bad(hint) end)
+    {time, result} = measure(fn -> get_completions_good(hint) end)
     Logger.info "Completed search for \"#{hint}\" in #{time}s"
     result
   end
@@ -26,6 +26,11 @@ defmodule Autocomplete do
   defp get_completions_good(hint) when is_bitstring(hint) and byte_size(hint) > 2 do
     lower_hint = String.downcase(hint)
     # PUT EXERCISE 10 SOLUTION HERE
+    "words.txt"
+    |> File.stream!
+    |> Stream.filter(fn w -> String.starts_with?(w, lower_hint) end)
+    |> Stream.take(30)
+    |> Enum.map(fn s -> String.replace(s, "\n", "") end)
   end
 
   # a function used to benchmark the autocomplete

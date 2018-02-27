@@ -16,7 +16,9 @@
       "request": "launch",
       "task": "test",
       "taskArgs": [
-        "--trace"
+        "--trace",
+        "--only",
+        "exercise7"
       ],
       "startApps": true,
       "projectDir": "${workspaceRoot}",

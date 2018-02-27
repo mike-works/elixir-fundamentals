@@ -2,9 +2,11 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+{{yr, _, _}, _ } = :calendar.universal_time
 config :elixir_fundamentals,
   github_api: "https://api.github.com",
-  github_token: "4223f2b92ca96cb0241f5befa9ed984dfda93235"
+  github_token: System.get_env("GITHUB_TOKEN"),
+  current_yr: yr
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
