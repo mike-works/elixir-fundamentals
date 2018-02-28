@@ -22,7 +22,7 @@ defmodule TicTacToeTest do
     |> TicTacToe.make_move("X", {1, 1})
 
     board_after = game |> TicTacToe.get_board
-    assert board_after[1][1] === "x"
+    assert board_after[1][1] === "X"
   end
 
 
