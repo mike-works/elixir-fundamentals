@@ -24,8 +24,9 @@
 This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="Elixir Fundamentals" href="https://mike.works/course/elixir-fundamentals-2b07030">Elixir Fundamentals</a> course.
 </p>
 
-# Are there any documents that go along with this?
-Yes! **[Here are the slides](https://docs.mike.works/elixir-fundamentals)**, and **[here's a course outline](https://mike.works/course/elixir-fundamentals-2b07030)**.
+# Course outline and slides
+ * [View course outline here](https://mike.works/course/elixir-fundamentals-2b07030)
+ * [View slides here](https://docs.mike.works/elixir-fundamentals)
 
 # Setting Up
 * First, you'll need to ensure you have [Elixir](http://elixir-lang.org/install.html) installed on your computer. This workshop requires that you have version `1.4` installed, which requires Erlang `v18`.
