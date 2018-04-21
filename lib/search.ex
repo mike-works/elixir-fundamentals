@@ -1,9 +1,20 @@
+
 defmodule Search do
-  def start do
-    
+  require Logger
+  def start(search_history \\ []) do
+    receive do
+      {sender_pid, {:complete_me, term }} ->
+        IO.puts "Last search was #{Enum.join(search_history, ", ")}. Begin search for #{term}"
+        results = Autocomplete.get_completions(term)
+        send(sender_pid, {self(), {:completions, results } })
+        start([term | search_history])
+      x ->
+        Logger.error "Unknown message"
+        IO.inspect x
+        start
+    end
   end
   def run(term) do
-    import Logger
     # Kick off process
     Logger.info "Kicking off"
     search_pid = spawn(Search, :start, [])

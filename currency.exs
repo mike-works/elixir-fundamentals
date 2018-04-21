@@ -1,6 +1,11 @@
 
 formatter = fn(symbol) ->
-  # TODO
+  #return
+  fn
+    0 -> "#{0}"
+    x when x > 0 -> "#{symbol} #{x}"
+    x when x < 0 -> "(#{symbol} #{-x})"
+  end
 end
 
 ##### TESTS #####

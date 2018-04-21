@@ -1,8 +1,12 @@
 
 formatter = fn
+  x when abs(x) >= 1_000_000 -> "#{x/1_000_000}M"
+  x when abs(x) >= 1_000 -> "#{x/1_000}K"
+  x -> "#{x}"
   _ -> "placeholder"
 end
 
+IO.inspect( [1, 2, 2, 3, 4] -- [2, 4]  )
 
 
 ##### TESTS #####

@@ -25,5 +25,13 @@ defmodule SearchTest do
     send(pid, {self(), {:complete_me, "elixi"}})
     assert_receive {pid, {:completions, [h2|t2]}} , 3_000
     assert length(t2) > 0
+
+    send(pid, {self(), {:complete_me, "rust"}})
+    assert_receive {pid, {:completions, [h2|t2]}} , 3_000
+    assert length(t2) > 0
+
+    send(pid, {self(), {:complete_me, "java"}})
+    assert_receive {pid, {:completions, [h2|t2]}} , 3_000
+    assert length(t2) > 0
   end
 end

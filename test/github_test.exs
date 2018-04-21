@@ -2,10 +2,11 @@ defmodule GithubTest do
   use ExUnit.Case
   @moduletag :exercise3
 
+  @github_token Application.get_env(:elixir_fundamentals, :github_token)
   @api_base Application.get_env(:elixir_fundamentals, :github_api) || "https://api.github.com"
 
   test "org URL building is done properly for string org names" do
-    assert Github.org_url("jquery") === "#{@api_base}/orgs/jquery"
+    assert Github.org_url("jquery") === "#{@api_base}/orgs/jquery?access_token=#{@github_token}"
   end
 
   test "org URL building is guarded against (is_bitstring) for non-string org names" do
@@ -15,7 +16,7 @@ defmodule GithubTest do
   end
 
   test "repo URL building is done properly for string owner and repo names" do
-    assert Github.repo_url("mike-works", "elixir-fundamentals-workshop") === "#{@api_base}/repos/mike-works/elixir-fundamentals-workshop"
+    assert Github.repo_url("mike-works", "elixir-fundamentals-workshop") === "#{@api_base}/repos/mike-works/elixir-fundamentals-workshop?access_token=#{@github_token}"
   end
 
   test "repo URL building is guarded against for non-string org and repo names" do

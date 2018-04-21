@@ -4,7 +4,7 @@ use Mix.Config
 
 config :elixir_fundamentals,
   github_api: "https://api.github.com",
-  github_token: "4223f2b92ca96cb0241f5befa9ed984dfda93235"
+  github_token: System.get_env("GITHUB_TOKEN")
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
