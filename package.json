@@ -1,5 +1,5 @@
 {
   "devDependencies": {
-    "@mike-works/js-lib-renovate-config": "^2.0.0"
+    "@mike-works/js-lib-renovate-config": "2.0.0"
   }
 }
