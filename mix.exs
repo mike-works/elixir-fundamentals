@@ -30,7 +30,7 @@ defmodule ElixirFundamentals.Mixfile do
   defp deps do
     [
       {:poison, "4.0.1"},
-      {:httpoison, "1.3.1"}
+      {:httpoison, "1.6.2"}
     ]
   end
 end
