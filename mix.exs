@@ -29,7 +29,7 @@ defmodule ElixirFundamentals.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:poison, "4.0.1"},
+      {:poison, "== 5.0.0"},
       {:httpoison, "== 1.8.2"}
     ]
   end
